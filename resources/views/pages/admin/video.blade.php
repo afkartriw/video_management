@@ -63,8 +63,10 @@
                         <td class="px-4 py-4 whitespace-nowrap">
                             <div class="text-sm text-gray-500 dark:text-gray-400">{{ $dt->judul_vid }}</div>
                         </td>
-                        <td class="px-4 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500 dark:text-gray-400">{{ $dt->deskripsi_vid }}</div>
+                        <td class="px-4 py-4">
+                            <div class="text-sm text-gray-500 dark:text-gray-400">
+                                {{ \Illuminate\Support\Str::limit($dt->deskripsi_vid, 50, '...') }}
+                            </div>
                         </td>
                         <td class="px-4 py-4 whitespace-nowrap">
                             <div class="text-sm text-gray-500 dark:text-gray-400">{{ $dt->link_vid }}</div>
